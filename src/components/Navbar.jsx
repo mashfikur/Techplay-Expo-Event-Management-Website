@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import navIcon from "../assets/images/navicon.png";
+import userLogo from "../assets/images/user.png";
 const Navbar = () => {
   const navLinks = (
     <>
@@ -16,7 +17,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="my-4">
+    <div className="my-4 container mx-auto">
       <div className="navbar bg-base-100">
         <div className="navbar-start w-[70%] lg:w-[50%] ">
           <div className="dropdown">
@@ -51,10 +52,38 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
-        <div className="navbar-end w-[30%] lg:w-[50%] ">
-          <Link to="/login">
-            {" "}
-            <button className="btn btn-neutral">Login</button>{" "}
+        <div className="navbar-end w-[30%] space-x-5 lg:w-[50%] ">
+          <p className=" hidden md:block  px-4 bg-black text-white font-semibold  py-1 rounded-full">
+            jane
+          </p>
+
+          <div className=" md:hidden dropdown dropdown-end">
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={userLogo} />
+              </div>
+            </label>
+            <ul
+              tabIndex={0}
+              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 flex flex-col items-center gap-4"
+            >
+              <li>
+                <span className="text-xl font-semibold">jane</span>
+              </li>
+              <li>
+                <Link className="  md:block" to="/login">
+                  <button className="btn btn-sm w-full btn-neutral">
+                    logout
+                  </button>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <img className="w-10 hidden md:block " src={userLogo} alt="" />
+
+          <Link className="hidden md:block" to="/login">
+            <button className="btn  round btn-neutral ">Login</button>
           </Link>
         </div>
       </div>
