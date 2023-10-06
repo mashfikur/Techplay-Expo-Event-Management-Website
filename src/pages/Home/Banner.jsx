@@ -7,10 +7,10 @@ const Banner = () => {
             Welcome to <br />{" "}
             <span className=" text-5xl lg:text-7xl "> TechPlay Expo</span>{" "}
           </h3>
-          <h3 className="font-semibold  ">
+          <h3 className="font-semibold  text-gray-400 ">
             Where events become Fun and organised.
           </h3>
-          <p className="font-semibold ">
+          <p className="font-semibold text-gray-400 ">
             Discover the Ultimate Fusion of Technology and Entertainment with
             Us.
           </p>

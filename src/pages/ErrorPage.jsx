@@ -1,3 +1,6 @@
+import { BsArrowUpLeft} from "react-icons/bs";
+import { Link } from "react-router-dom";
+
 const ErrorPage = () => {
   return (
     <div>
@@ -11,6 +14,15 @@ const ErrorPage = () => {
         <p className="uppercase font-medium text-xl">
           we are sorry , but the page you requested was not found
         </p>
+
+        <div className="mt-6">
+          <Link to="/">
+            <button className="btn btn-neutral flex items-center ">
+              {" "}
+              <BsArrowUpLeft className="text-xl"></BsArrowUpLeft> Go Home
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

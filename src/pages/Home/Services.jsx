@@ -15,7 +15,7 @@ const Services = () => {
     <div className="mt-8 container mx-auto">
       <h3 className="text-center font-bold text-3xl">Our Services : {services.length} </h3>
 
-        <div>
+        <div className="grid grid-cols-3 gap-10">
             {
                 services.map(service=><Service key={service.id} service={service} ></Service>)
             }
