@@ -9,7 +9,7 @@ const ErrorPage = () => {
           <span className="">4</span>
         </h1>
         <p className="uppercase font-medium text-xl">
-          we are sorry but the page you requested was not found
+          we are sorry , but the page you requested was not found
         </p>
       </div>
     </div>
