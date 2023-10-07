@@ -1,135 +1,182 @@
 [
-    {
-      "id": 1,
-      "service_name": "Tech Expo Extravaganza",
-      "category_name": "Technology Event",
-      "service_details": "Join us for a three-day immersive experience into the world of technology. Explore the latest innovations, witness groundbreaking product launches, and participate in hands-on workshops led by industry experts. Connect with like-minded tech enthusiasts and get a glimpse into the future of technology.",
-      "service_image": "https://i.ibb.co/6N5hjjW/alexandre-pellaes-6v-Ajp0psc-X0-unsplash-1-1.jpg",
-      "price": 2500,
-      "service_features": [
-        "Exhibition Space",
-        "Keynote Speakers",
-        "Workshops",
-        "Networking Opportunities"
-      ]
-    },
-    {
-      "id": 2,
-      "service_name": "Gamer's Paradise",
-      "category_name": "Gaming Event",
-      "service_details": "Get ready for an adrenaline-pumping gaming extravaganza! Compete in epic eSports tournaments, showcase your cosplay skills, and be the first to try out upcoming game releases. Don't miss out on the chance to win fantastic prizes and immerse yourself in the gaming community.",
-      "service_image": "https://i.ibb.co/tJ6m849/generic-pexels-gaming-event-alena-darmel-7862655-1024x620.jpgs",
-      "price": 1800,
-      "service_features": [
-        "Tournaments",
-        "Cosplay Contest",
-        "Game Previews",
-        "Prize Giveaways"
-      ],
-      "more_images":[
-        "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
-        "https://i.ibb.co/Bqr5G0z/images-q-tbn-ANd9-Gc-SAN3-uck-Pyst-UYb-MODMn-Wl-RDBe-JMtm-RZp-Cvf3d-K3ely-Sxp0xci2-Sg-RWP7nm-YZGCvql.jpg",
-        "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
-        "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
-      ]
-    },
-    {
-      "id": 3,
-      "service_name": "CodeMaster Challenge",
-      "category_name": "Hackathon",
-      "service_details": "Calling all coding enthusiasts and problem solvers! The CodeMaster Challenge is your chance to showcase your coding skills. Collaborate with talented programmers, take on coding challenges, and receive mentorship from industry experts. Win recognition and exciting prizes!",
-      "service_image": "https://i.ibb.co/yqc8bm8/1200px-Junction-2015.jpg",
-      "price": 1200,
-      "service_features": [
-        "Coding Challenges",
-        "Team Collaboration",
-        "Prize Awards",
-        "Mentorship"
-      ]
-    },
-    {
-      "id": 4,
-      "service_name": "FutureTech Symposium",
-      "category_name": "Technology Event",
-      "service_details": "Dive deep into the future of technology at the FutureTech Symposium. Engage in insightful discussions with industry leaders, experience hands-on demos of cutting-edge tech, and gain inspiration from innovative talks. Connect with fellow tech enthusiasts and explore the limitless possibilities of tomorrow's tech.",
-      "service_image": "https://i.ibb.co/rQkJn65/5-Event-Tech-Trends-to-Watch-Out-For-in-2020-scaled-1-1024x683.jpg",
-      "price": 2800,
-      "service_features": [
-        "Expert Panels",
-        "Interactive Demos",
-        "Innovative Talks",
-        "Networking Sessions"
-      ]
-    },
-    {
-      "id": 5,
-      "service_name": "eSports Showdown",
-      "category_name": "Gaming Event",
-      "service_details": "Join the eSports Showdown and witness the best gamers in action! Participate in thrilling eSports tournaments, enjoy exclusive game previews, and indulge in delicious food and drinks. Take home memories and exciting game merchandise.",
-      "service_image": "https://i.ibb.co/HFD5zMQ/images-q-tbn-ANd9-Gc-TU0q-SVp6-Qg-D3-Ksra5-DLvsb-IOLizxm-Ew-TNLKw-usqp-CAU.jpg",
-      "price": 2100,
-      "service_features": [
-        "eSports Tournaments",
-        "Pro Gamer Exhibition",
-        "Game Merchandise",
-        "Food and Drinks"
-      ]
-    },
-    {
-      "id": 6,
-      "service_name": "AI Hackathon Challenge",
-      "category_name": "Hackathon",
-      "service_details": "Are you up for the AI Hackathon Challenge? Dive into the world of artificial intelligence, develop innovative solutions, and compete against the brightest minds in AI. Benefit from expert guidance, network with AI enthusiasts, and win prestigious awards.",
-      "service_image": "https://i.ibb.co/QDt9xCW/images-q-tbn-ANd9-Gc-TR8lx4dk-GBYEj-VHANc-Af-Fhg-NNBFMXI3f-C-KYVx-If-4-z-B5-Rq-Gn-Ufmq-KYZ6-Nvs-Ed-J.jpg",
-      "price": 1500,
-      "service_features": [
-        "AI Development",
-        "Challenge Categories",
-        "AI Experts",
-        "Networking"
-      ]
-    },
-    {
-      "id": 7,
-      "service_name": "TechTalk Symposium",
-      "category_name": "Technology Event",
-      "service_details": "At the TechTalk Symposium, explore the latest tech trends through engaging workshops and discussion panels. Gain insights from industry leaders, attend Q&A sessions, and connect with tech enthusiasts. Dive deep into the world of technology and stay ahead of the curve.",
-      "service_image": "https://i.ibb.co/DChLD2m/images-q-tbn-ANd9-Gc-QIQ5-QGAh-OYQ3d-Nig2-MI3t-OH0-SQF1-Go-Uf-Rqq-Hqe-Oo-O1-Vw-USCy-U3m-Pt-Fl-Y52p4.jpg",
-      "price": 2600,
-      "service_features": [
-        "Tech Workshops",
-        "Discussion Panels",
-        "Industry Leaders",
-        "Q&A Sessions"
-      ]
-    },
-    {
-      "id": 8,
-      "service_name": "Retro Gaming Expo",
-      "category_name": "Gaming Event",
-      "service_details": "Relive the nostalgia at the Retro Gaming Expo! Play classic video games, explore vintage consoles, and immerse yourself in the world of retro gaming. Join the cosplay corner and grab retro merchandise to commemorate your visit.",
-      "service_image": "https://i.ibb.co/PDzy60d/Gaming-Industry-Page-body-image-13.png",
-      "price": 1900,
-      "service_features": [
-        "Classic Games",
-        "Retro Consoles",
-        "Cosplay Corner",
-        "Retro Merchandise"
-      ]
-    },
-    {
-      "id": 9,
-      "service_name": "Cybersecurity Hackathon",
-      "category_name": "Hackathon",
-      "service_details": "Test your cybersecurity prowess at the Cybersecurity Hackathon. Tackle real-world security challenges, receive mentorship from security experts, and compete for prestigious prize trophies. Enhance your skills and make a mark in the cybersecurity world.",
-      "service_image": "https://i.ibb.co/q55x1bm/nwerc-2018-l.jpg",
-      "price": 1350,
-      "service_features": [
-        "Cybersecurity Challenges",
-        "Real-world Scenarios",
-        "Security Experts",
-        "Prize Trophies"
-      ]
-    }
-  ]
-  
+  {
+    "id": 1,
+    "service_name": "Tech Expo Extravaganza",
+    "category_name": "Technology Event",
+    "service_details": "Join us for a three-day immersive experience into the world of technology. Explore the latest innovations, witness groundbreaking product launches, and participate in hands-on workshops led by industry experts. Connect with like-minded tech enthusiasts and get a glimpse into the future of technology.",
+    "service_image": "https://i.ibb.co/6N5hjjW/alexandre-pellaes-6v-Ajp0psc-X0-unsplash-1-1.jpg",
+    "price": 2500,
+    "service_features": [
+      "Exhibition Space",
+      "Keynote Speakers",
+      "Workshops",
+      "Networking Opportunities"
+    ],
+    "more_images": [
+      "https://i.ibb.co/6N5hjjW/alexandre-pellaes-6v-Ajp0psc-X0-unsplash-1-1.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "service_name": "Gamer's Paradise",
+    "category_name": "Gaming Event",
+    "service_details": "Get ready for an adrenaline-pumping gaming extravaganza! Compete in epic eSports tournaments, showcase your cosplay skills, and be the first to try out upcoming game releases. Don't miss out on the chance to win fantastic prizes and immerse yourself in the gaming community.",
+    "service_image": "https://i.ibb.co/tJ6m849/generic-pexels-gaming-event-alena-darmel-7862655-1024x620.jpgs",
+    "price": 1800,
+    "service_features": [
+      "Tournaments",
+      "Cosplay Contest",
+      "Game Previews",
+      "Prize Giveaways"
+    ],
+    "more_images": [
+      "https://i.ibb.co/tJ6m849/generic-pexels-gaming-event-alena-darmel-7862655-1024x620.jpgs",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "service_name": "CodeMaster Challenge",
+    "category_name": "Hackathon",
+    "service_details": "Calling all coding enthusiasts and problem solvers! The CodeMaster Challenge is your chance to showcase your coding skills. Collaborate with talented programmers, take on coding challenges, and receive mentorship from industry experts. Win recognition and exciting prizes!",
+    "service_image": "https://i.ibb.co/yqc8bm8/1200px-Junction-2015.jpg",
+    "price": 1200,
+    "service_features": [
+      "Coding Challenges",
+      "Team Collaboration",
+      "Prize Awards",
+      "Mentorship"
+    ],
+    "more_images": [
+      "https://i.ibb.co/yqc8bm8/1200px-Junction-2015.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "service_name": "FutureTech Symposium",
+    "category_name": "Technology Event",
+    "service_details": "Dive deep into the future of technology at the FutureTech Symposium. Engage in insightful discussions with industry leaders, experience hands-on demos of cutting-edge tech, and gain inspiration from innovative talks. Connect with fellow tech enthusiasts and explore the limitless possibilities of tomorrow's tech.",
+    "service_image": "https://i.ibb.co/rQkJn65/5-Event-Tech-Trends-to-Watch-Out-For-in-2020-scaled-1-1024x683.jpg",
+    "price": 2800,
+    "service_features": [
+      "Expert Panels",
+      "Interactive Demos",
+      "Innovative Talks",
+      "Networking Sessions"
+    ],
+    "more_images": [
+      "https://i.ibb.co/rQkJn65/5-Event-Tech-Trends-to-Watch-Out-For-in-2020-scaled-1-1024x683.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "service_name": "eSports Showdown",
+    "category_name": "Gaming Event",
+    "service_details": "Join the eSports Showdown and witness the best gamers in action! Participate in thrilling eSports tournaments, enjoy exclusive game previews, and indulge in delicious food and drinks. Take home memories and exciting game merchandise.",
+    "service_image": "https://i.ibb.co/HFD5zMQ/images-q-tbn-ANd9-Gc-TU0q-SVp6-Qg-D3-Ksra5-DLvsb-IOLizxm-Ew-TNLKw-usqp-CAU.jpg",
+    "price": 2100,
+    "service_features": [
+      "eSports Tournaments",
+      "Pro Gamer Exhibition",
+      "Game Merchandise",
+      "Food and Drinks"
+    ],
+    "more_images": [
+      "https://i.ibb.co/HFD5zMQ/images-q-tbn-ANd9-Gc-TU0q-SVp6-Qg-D3-Ksra5-DLvsb-IOLizxm-Ew-TNLKw-usqp-CAU.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "service_name": "AI Hackathon Challenge",
+    "category_name": "Hackathon",
+    "service_details": "Are you up for the AI Hackathon Challenge? Dive into the world of artificial intelligence, develop innovative solutions, and compete against the brightest minds in AI. Benefit from expert guidance, network with AI enthusiasts, and win prestigious awards.",
+    "service_image": "https://i.ibb.co/QDt9xCW/images-q-tbn-ANd9-Gc-TR8lx4dk-GBYEj-VHANc-Af-Fhg-NNBFMXI3f-C-KYVx-If-4-z-B5-Rq-Gn-Ufmq-KYZ6-Nvs-Ed-J.jpg",
+    "price": 1500,
+    "service_features": [
+      "AI Development",
+      "Challenge Categories",
+      "AI Experts",
+      "Networking"
+    ],
+    "more_images": [
+      "https://i.ibb.co/QDt9xCW/images-q-tbn-ANd9-Gc-TR8lx4dk-GBYEj-VHANc-Af-Fhg-NNBFMXI3f-C-KYVx-If-4-z-B5-Rq-Gn-Ufmq-KYZ6-Nvs-Ed-J.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "service_name": "TechTalk Symposium",
+    "category_name": "Technology Event",
+    "service_details": "At the TechTalk Symposium, explore the latest tech trends through engaging workshops and discussion panels. Gain insights from industry leaders, attend Q&A sessions, and connect with tech enthusiasts. Dive deep into the world of technology and stay ahead of the curve.",
+    "service_image": "https://i.ibb.co/DChLD2m/images-q-tbn-ANd9-Gc-QIQ5-QGAh-OYQ3d-Nig2-MI3t-OH0-SQF1-Go-Uf-Rqq-Hqe-Oo-O1-Vw-USCy-U3m-Pt-Fl-Y52p4.jpg",
+    "price": 2600,
+    "service_features": [
+      "Tech Workshops",
+      "Discussion Panels",
+      "Industry Leaders",
+      "Q&A Sessions"
+    ],
+    "more_images": [
+      "https://i.ibb.co/DChLD2m/images-q-tbn-ANd9-Gc-QIQ5-QGAh-OYQ3d-Nig2-MI3t-OH0-SQF1-Go-Uf-Rqq-Hqe-Oo-O1-Vw-USCy-U3m-Pt-Fl-Y52p4.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "service_name": "Retro Gaming Expo",
+    "category_name": "Gaming Event",
+    "service_details": "Relive the nostalgia at the Retro Gaming Expo! Play classic video games, explore vintage consoles, and immerse yourself in the world of retro gaming. Join the cosplay corner and grab retro merchandise to commemorate your visit.",
+    "service_image": "https://i.ibb.co/PDzy60d/Gaming-Industry-Page-body-image-13.png",
+    "price": 1900,
+    "service_features": [
+      "Classic Games",
+      "Retro Consoles",
+      "Cosplay Corner",
+      "Retro Merchandise"
+    ],
+    "more_images": [
+      "https://i.ibb.co/PDzy60d/Gaming-Industry-Page-body-image-13.png",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "service_name": "Cybersecurity Hackathon",
+    "category_name": "Hackathon",
+    "service_details": "Test your cybersecurity prowess at the Cybersecurity Hackathon. Tackle real-world security challenges, receive mentorship from security experts, and compete for prestigious prize trophies. Enhance your skills and make a mark in the cybersecurity world.",
+    "service_image": "https://i.ibb.co/q55x1bm/nwerc-2018-l.jpg",
+    "price": 1350,
+    "service_features": [
+      "Cybersecurity Challenges",
+      "Real-world Scenarios",
+      "Security Experts",
+      "Prize Trophies"
+    ],
+    "more_images": [
+      "https://i.ibb.co/q55x1bm/nwerc-2018-l.jpg",
+      "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+      "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+      "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
+    ]
+  }
+]
