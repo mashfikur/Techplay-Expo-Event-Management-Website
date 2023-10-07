@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Authentication/AuthProvider";
 import toast from "react-hot-toast";
 const Navbar = () => {
-  const { user, loading, userSignOut ,setUser } = useContext(AuthContext);
+  const { user, loading, userSignOut, setUser } = useContext(AuthContext);
 
   const navLinks = (
     <>
@@ -25,7 +25,7 @@ const Navbar = () => {
     userSignOut()
       .then(() => {
         toast.success("Logged Out Successfully");
-        setUser(null)
+        setUser(null);
       })
       .catch((error) => {
         toast.error(error.message);
@@ -62,7 +62,11 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-3">
             <img className=" w-[15%] md:w-[7%]" src={navIcon} alt="" />
-            <h3 className="font-semibold text-xl md:text-3xl">TechPlay Expo</h3>
+            <Link to="/" >
+              <h3 className="font-semibold text-base md:text-3xl">
+                TechPlay Expo
+              </h3>
+            </Link>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -71,57 +75,83 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end w-[30%] space-x-5 lg:w-[50%] ">
-          <div className=" md:hidden dropdown dropdown-end">
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src={userLogo} />
-              </div>
-            </label>
-            <ul
-              tabIndex={0}
-              className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 flex flex-col items-center gap-4"
-            >
-              <li>
-                <span className="text-xl font-semibold">jane</span>
-              </li>
-              <li>
-                <Link className="  md:block" to="/login">
-                  <button className="btn btn-sm w-full btn-neutral">
-                    logout
-                  </button>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
           {loading ? (
             <span className="loading loading-spinner loading-lg"></span>
           ) : user ? (
-            <div className=" gap-3 items-center hidden md:flex">
-              <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
-                {user.displayName}
-              </p>
+            <>
+              <div className=" gap-3 items-center hidden md:flex">
+                <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
+                  {user.displayName}
+                </p>
 
-              <img
-                className="w-10  "
-                src={user.photoURL ? user.photoURL : userLogo}
-                alt=""
-              />
-              <div>
-                <button onClick={handleSignOut} className="btn   round btn-neutral ">Logout</button>
+                <img
+                  className="w-12 rounded-full h-12  "
+                  src={user.photoURL ? user.photoURL : userLogo}
+                  alt=""
+                />
+                <div>
+                  <button
+                    onClick={handleSignOut}
+                    className="btn   round btn-neutral "
+                  >
+                    Logout
+                  </button>
+                </div>
               </div>
-            </div>
+
+              <div className=" md:hidden dropdown dropdown-end">
+                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img src={user?.photoURL ? user?.photoURL : userLogo} />
+                  </div>
+                </label>
+                <ul
+                  tabIndex={0}
+                  className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 flex flex-col items-center gap-4"
+                >
+                  <li>
+                    <span className="text-xl font-semibold">
+                      {user?.displayName}
+                    </span>
+                  </li>
+                  <li>
+                    <Link className="  md:block">
+                      <button
+                        onClick={handleSignOut}
+                        className="btn btn-sm w-full btn-neutral"
+                      >
+                        Logout
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </>
           ) : (
-            <div className="hidden md:flex gap-4">
-              <Link to="/register">
-                <button className="btn  round btn-neutral btn-outline ">
-                  Register
-                </button>
-              </Link>
-              <Link to="/login">
-                <button className="btn  round btn-neutral ">Login</button>
-              </Link>
-            </div>
+            <>
+              <div className="hidden md:flex gap-4">
+                <Link to="/register">
+                  <button className="btn  round btn-neutral btn-outline ">
+                    Register
+                  </button>
+                </Link>
+                <Link to="/login">
+                  <button className="btn  round btn-neutral ">Login</button>
+                </Link>
+              </div>
+              <div className=" md:hidden flex gap-2">
+                <Link to="/register">
+                  <button className="btn btn-xs btn-neutral  rounded-lg ">
+                    Register
+                  </button>
+                </Link>
+                <Link to="/login">
+                  <button className="btn btn-xs btn-neutral  rounded-lg ">
+                    Login
+                  </button>
+                </Link>
+              </div>
+            </>
           )}
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Authentication/AuthProvider";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import toast from "react-hot-toast";
@@ -10,6 +10,7 @@ import { updateProfile } from "firebase/auth";
 const Register = () => {
   const [showError, setShowError] = useState("");
   const [showPass, setShowPass] = useState(false);
+  const navigate =useNavigate()
 
   const { createUser } = useContext(AuthContext);
 
@@ -54,6 +55,7 @@ const Register = () => {
         })
           .then(() => {
             toast.success("Account Created Successfully");
+            navigate("/")
           })
           .catch((error) => {
             toast.error(error.message);
@@ -66,7 +68,7 @@ const Register = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="min-w-screen min-h-[90vh] flex items-center justify-center px-5 py-5">
+      <div className="min-w-screen min-h-[90vh] flex items-center justify-center px-5 py-">
         <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
           <div className="md:flex w-full">
             <div className="hidden  md:flex md:flex-col md:items-center md:justify-center w-1/2 bg-gradient-to-r from-[#ff00d4] to-[#00ddff] py-10 px-10">
@@ -95,7 +97,7 @@ const Register = () => {
                         type="text"
                         name="fullName"
                         className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                        placeholder="John"
+                        placeholder="Name"
                         required
                       />
                     </div>
@@ -130,7 +132,7 @@ const Register = () => {
                         type="email"
                         name="email"
                         className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                        placeholder="dane@example.com"
+                        placeholder="Email address"
                         required
                       />
                     </div>
@@ -149,7 +151,7 @@ const Register = () => {
                         type={`${showPass ? "text" : "password"}`}
                         name="password"
                         className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500 z-10"
-                        placeholder="*******"
+                        placeholder="Password"
                         required
                       />
                       <p
