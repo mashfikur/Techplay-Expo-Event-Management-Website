@@ -1,9 +1,10 @@
 import { BsSearch } from "react-icons/bs";
+import Jobs from "./Jobs";
 
 const Career = () => {
   return (
     <div>
-      <div className="flex p-6 lg:p-0 flex-col-reverse lg:flex-row container mx-auto items-center min-h-[90vh] ">
+      <div className="flex p-6 xl:p-0 flex-col-reverse lg:flex-row container mx-auto items-center min-h-[90vh] ">
         <div className="flex-1 space-y-6 ">
           <h3 className=" text-3xl lg:text-5xl font-bold mb-5">
             Want to build in your carrer in event management?
@@ -15,18 +16,19 @@ const Career = () => {
             career.
           </p>
           <div>
-            <a href="#jobs">
-              <button className="btn btn-neutral ">
-                {" "}
-                <BsSearch></BsSearch> Find job
-              </button>
-            </a>
+            <button className="btn btn-neutral ">
+              {" "}
+              <BsSearch></BsSearch> Find job
+            </button>
           </div>
         </div>
+
         <div className="flex-1">
           <img src="https://i.ibb.co/BVyjDLh/interview.png" alt="" />
         </div>
       </div>
+
+      <Jobs></Jobs>
 
       <div className="my-12  container mx-auto p-6">
         <h3 className="text-4xl font-bold text-center">

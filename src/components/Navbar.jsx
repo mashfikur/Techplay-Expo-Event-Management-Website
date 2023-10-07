@@ -87,7 +87,7 @@ const Navbar = () => {
                 </p>
 
                 <img
-                  className="w-12 rounded-full h-12  "
+                  className="w-12 border-2 border-black rounded-full h-12  "
                   src={user?.photoURL ? user?.photoURL : userLogo}
                   alt=""
                 />
