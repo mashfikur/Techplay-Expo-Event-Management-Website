@@ -12,7 +12,7 @@ const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
 
-  const { createUser, setUser, setLoading, setNavName  } =
+  const { createUser, setUser, setLoading, setNavName, googleUser } =
     useContext(AuthContext);
 
   const handleSubmit = (e) => {
@@ -42,7 +42,6 @@ const Register = () => {
       return;
     }
 
-
     // creating user
     createUser(email, password)
       .then((result) => {
@@ -55,7 +54,7 @@ const Register = () => {
           photoURL: imgLink,
         })
           .then(() => {
-            toast.success("Account Created Successfully");
+            toast.success(" Created Account Successfully");
             setUser(result.user);
             navigate("/");
           })
@@ -63,6 +62,18 @@ const Register = () => {
             toast.error(error.message);
             setLoading(false);
           });
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        setLoading(false);
+      });
+  };
+
+  const handleGoogleSignUp = () => {
+    googleUser()
+      .then(() => {
+        toast.success("Created Account Successfully");
+        navigate("/");
       })
       .catch((error) => {
         toast.error(error.message);
@@ -186,7 +197,10 @@ const Register = () => {
                 <div className="divider">OR</div>
 
                 <div className="flex flex-col items-center">
-                  <button className="btn w-full xl:w-1/3 rounded-full btn-outline mb-3 ">
+                  <button
+                    onClick={handleGoogleSignUp}
+                    className="btn w-full xl:w-1/3 rounded-full btn-outline mb-3 "
+                  >
                     <FcGoogle className="text-xl"></FcGoogle> Sign Up with
                     Google
                   </button>

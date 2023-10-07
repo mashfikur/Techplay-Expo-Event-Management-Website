@@ -6,7 +6,7 @@ import { AuthContext } from "../Authentication/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { userSignIn ,setLoading } = useContext(AuthContext);
+  const { userSignIn ,setLoading,googleUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -22,11 +22,22 @@ const Login = () => {
         navigate("/");
       })
       .catch((error) => {
-        console.log(error);
         toast.error(error.code);
         setLoading(false)
       });
   };
+
+  const handleGoogleLogin = () => {
+    googleUser()
+    .then(() => {
+      toast.success("Logged in Successfully")
+      navigate("/")
+    })
+    .catch((error) => {
+      toast.error(error.message)
+      setLoading(false)
+    })
+  }
 
   return (
     <div className="container mx-auto">
@@ -89,7 +100,7 @@ const Login = () => {
                     </form>
                     <div className="divider">OR</div>
                     <div className="flex flex-col gap-3  ">
-                      <button className="btn  rounded-full">
+                      <button onClick={handleGoogleLogin} className="btn  rounded-full">
                         <FcGoogle className="md:text-xl"></FcGoogle>
                         Sign in with Google
                       </button>

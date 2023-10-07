@@ -112,7 +112,7 @@ const Navbar = () => {
                   className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52 flex flex-col items-center gap-4"
                 >
                   <li>
-                    <span className="text-xl font-semibold">
+                    <span className="text-xl text-center font-semibold">
                       {user?.displayName}
                     </span>
                   </li>
