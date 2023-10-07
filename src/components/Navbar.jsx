@@ -8,10 +8,10 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
-        <NavLink to="/carrer">Career</NavLink>
+        <NavLink to="/career">Career</NavLink>
       </li>
       <li>
-        <NavLink to="/carrer">Manage Events</NavLink>
+        <NavLink to="/manage-events">Manage Events</NavLink>
       </li>
     </>
   );
@@ -50,7 +50,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-bold">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 font-bold space-x-4">{navLinks}</ul>
         </div>
         <div className="navbar-end w-[30%] space-x-5 lg:w-[50%] ">
           <p className=" hidden md:block  px-4 bg-black text-white font-semibold  py-1 rounded-full">
