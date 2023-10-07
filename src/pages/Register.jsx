@@ -1,10 +1,67 @@
+import { useContext, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Authentication/AuthProvider";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import toast from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
 
 const Register = () => {
+  const [showError, setShowError] = useState("");
+  const [showPass, setShowPass] = useState(false);
+
+  const { createUser } = useContext(AuthContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    const name = e.target.fullName.value;
+    const imgLink = e.target.link.value;
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    // reseting the error
+    setShowError("");
+
+    // password validation
+    if (password.length < 6) {
+      setShowError("Your Password should be more than 6 charectars");
+      return;
+    }
+
+    //
+    if (!/[A-Z]/.test(password)) {
+      setShowError("Your password must have an uppercase charectar");
+      return;
+    }
+    //
+    if (!/[#&$@%^]/g.test(password)) {
+      setShowError("Your password should contain a special charectar");
+      return;
+    }
+
+    console.log(name, email, password);
+
+    // creating user
+    createUser(email, password)
+      .then((result) => {
+        e.target.reset();
+
+        // updating user info
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: imgLink,
+        })
+          .then(() => {
+            toast.success("Account Created Successfully");
+          })
+          .catch((error) => {
+            toast.error(error.message);
+          });
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
   };
 
   return (
@@ -80,7 +137,7 @@ const Register = () => {
                   </div>
                 </div>
                 <div className="flex">
-                  <div className="w-full px-3 mb-12">
+                  <div className="w-full px-3 mb-2">
                     <label className="text-xs font-semibold px-1">
                       Password
                     </label>
@@ -89,15 +146,30 @@ const Register = () => {
                         <i className="mdi mdi-lock-outline text-gray-400 text-lg"></i>
                       </div>
                       <input
-                        type="password"
+                        type={`${showPass ? "text" : "password"}`}
                         name="password"
-                        className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                        className="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500 z-10"
                         placeholder="*******"
                         required
                       />
+                      <p
+                        onClick={() => setShowPass(!showPass)}
+                        className="-ml-8 text-xl mt-3 z-40 cursor-pointer"
+                      >
+                        {showPass ? (
+                          <AiFillEyeInvisible></AiFillEyeInvisible>
+                        ) : (
+                          <AiFillEye></AiFillEye>
+                        )}
+                      </p>
                     </div>
                   </div>
                 </div>
+                {showError && (
+                  <p className="font-bold text-red-600 ml-4 mb-3">
+                    {showError}*
+                  </p>
+                )}
                 <div className="flex flex-col items-center">
                   <button className="btn btn-neutral w-full xl:w-1/3">
                     REGISTER NOW

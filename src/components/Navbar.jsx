@@ -1,7 +1,12 @@
 import { Link, NavLink } from "react-router-dom";
 import navIcon from "../assets/images/navicon.png";
 import userLogo from "../assets/images/user.png";
+import { useContext } from "react";
+import { AuthContext } from "../Authentication/AuthProvider";
+import toast from "react-hot-toast";
 const Navbar = () => {
+  const { user, loading, userSignOut ,setUser } = useContext(AuthContext);
+
   const navLinks = (
     <>
       <li>
@@ -15,6 +20,17 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const handleSignOut = () => {
+    userSignOut()
+      .then(() => {
+        toast.success("Logged Out Successfully");
+        setUser(null)
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
 
   return (
     <div className="my-4 container mx-auto">
@@ -50,13 +66,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 font-bold space-x-4">{navLinks}</ul>
+          <ul className="menu menu-horizontal px-1 font-bold space-x-4">
+            {navLinks}
+          </ul>
         </div>
         <div className="navbar-end w-[30%] space-x-5 lg:w-[50%] ">
-          <p className=" hidden md:block  px-4 bg-black text-white font-semibold  py-1 rounded-full">
-            jane
-          </p>
-
           <div className=" md:hidden dropdown dropdown-end">
             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
@@ -80,11 +94,35 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <img className="w-10 hidden md:block " src={userLogo} alt="" />
+          {loading ? (
+            <span className="loading loading-spinner loading-lg"></span>
+          ) : user ? (
+            <div className=" gap-3 items-center hidden md:flex">
+              <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
+                {user.displayName}
+              </p>
 
-          <Link className="hidden md:block" to="/login">
-            <button className="btn  round btn-neutral ">Login</button>
-          </Link>
+              <img
+                className="w-10  "
+                src={user.photoURL ? user.photoURL : userLogo}
+                alt=""
+              />
+              <div>
+                <button onClick={handleSignOut} className="btn   round btn-neutral ">Logout</button>
+              </div>
+            </div>
+          ) : (
+            <div className="hidden md:flex gap-4">
+              <Link to="/register">
+                <button className="btn  round btn-neutral btn-outline ">
+                  Register
+                </button>
+              </Link>
+              <Link to="/login">
+                <button className="btn  round btn-neutral ">Login</button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>
