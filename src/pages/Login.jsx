@@ -5,6 +5,10 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../Authentication/AuthProvider";
 import toast from "react-hot-toast";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 const Login = () => {
   const { userSignIn, setLoading, googleUser } = useContext(AuthContext);
   const navigate = useNavigate();
@@ -22,7 +26,7 @@ const Login = () => {
       .then(() => {
         toast.success("Logged In Successfully");
         e.target.reset();
-        navigate(from , {replace:true} );
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         toast.error(error.code);
@@ -49,10 +53,13 @@ const Login = () => {
   return (
     <div className="container mx-auto">
       <div className="px-10  flex xl:flex-row items-center justify-center xl:justify-start gap-10 xl:gap-20">
-        <div className="hidden xl:block">
+        <div data-aos="fade-right" className="hidden xl:block">
           <img src="https://i.ibb.co/ZLpf2wT/login-cover.png" alt="" />
         </div>
-        <div className="min-h-[80vh] py-10 flex flex-col justify-center ">
+        <div
+          data-aos="fade-left"
+          className="min-h-[80vh] py-10 flex flex-col justify-center "
+        >
           <div className="relative py-3 sm:max-w-xl sm:mx-auto">
             <div className="absolute inset-0 bg-gradient-to-r from-[#ff00d4] to-[#00ddff] shadow-lg  -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
             <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-20">

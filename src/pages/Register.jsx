@@ -6,6 +6,9 @@ import { AuthContext } from "../Authentication/AuthProvider";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
 
 const Register = () => {
   const [showError, setShowError] = useState("");
@@ -87,7 +90,7 @@ const Register = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="min-w-screen min-h-[90vh] flex items-center justify-center px-5 py-">
+      <div data-aos="fade-up" className="min-w-screen min-h-[90vh] flex items-center justify-center px-5 pb-12">
         <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
           <div className="md:flex w-full">
             <div className="hidden  md:flex md:flex-col md:items-center md:justify-center w-1/2 bg-gradient-to-r from-[#ff00d4] to-[#00ddff] py-10 px-10">
