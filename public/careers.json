@@ -1,0 +1,99 @@
+[
+    {
+      "id": 1,
+      "job_title": "Event Coordinator",
+      "job_location": "Los Angeles, CA",
+      "job_image": "https://i.ibb.co/zGxNT95/career.png",
+      "experience": "2-3 years",
+      "job_details": "Coordinate and manage all aspects of tech and gaming events, including logistics, vendors, and schedules."
+    },
+    {
+      "id": 2,
+      "job_title": "Gaming Tournament Manager",
+      "job_location": "San Francisco, CA",
+      "job_image": "https://i.ibb.co/x8pvDLS/career-1.jpg",
+      "experience": "4-5 years",
+      "job_details": "Plan and execute gaming tournaments, oversee registration, and ensure smooth gameplay."
+    },
+    {
+      "id": 3,
+      "job_title": "Technical Support Specialist",
+      "job_location": "New York, NY",
+      "job_image": "https://i.ibb.co/t36c34N/career-2.jpg",
+      "experience": "1-2 years",
+      "job_details": "Provide technical support during gaming events, troubleshoot issues, and assist participants."
+    },
+    {
+      "id": 4,
+      "job_title": "Event Marketing Manager",
+      "job_location": "Chicago, IL",
+      "job_image": "https://i.ibb.co/kcH75Tn/career-3.jpg",
+      "experience": "3-4 years",
+      "job_details": "Develop and implement marketing strategies to promote tech and gaming events."
+    },
+    {
+      "id": 5,
+      "job_title": "Gaming Content Creator",
+      "job_location": "Seattle, WA",
+      "job_image": "https://i.ibb.co/G9BGMnG/career-4.jpg",
+      "experience": "2-3 years",
+      "job_details": "Create engaging gaming content for social media and event promotion."
+    },
+    {
+      "id": 6,
+      "job_title": "Technical Event Producer",
+      "job_location": "Austin, TX",
+      "job_image": "https://i.ibb.co/YQzLh6c/career-5.jpg",
+      "experience": "5-6 years",
+      "job_details": "Oversee the technical aspects of event production, including audiovisual setup and equipment."
+    },
+    {
+      "id": 7,
+      "job_title": "Gaming Event Planner",
+      "job_location": "Denver, CO",
+      "job_image": "https://i.ibb.co/r6t1nhJ/career-6.jpg",
+      "experience": "3-4 years",
+      "job_details": "Plan and coordinate gaming events, from concept to execution, ensuring a memorable experience."
+    },
+    {
+      "id": 8,
+      "job_title": "Tech Event Security Officer",
+      "job_location": "Miami, FL",
+      "job_image": "https://i.ibb.co/ryX4Q81/career-7.jpg",
+      "experience": "1-2 years",
+      "job_details": "Provide security and safety measures during tech and gaming events."
+    },
+    {
+      "id": 9,
+      "job_title": "Gaming Tournament Commentator",
+      "job_location": "Las Vegas, NV",
+      "job_image": "https://i.ibb.co/MnsQDNn/career-8.jpg",
+      "experience": "2-3 years",
+      "job_details": "Provide live commentary and analysis during gaming tournaments."
+    },
+    {
+      "id": 10,
+      "job_title": "Event Technology Specialist",
+      "job_location": "Orlando, FL",
+      "job_image": "https://i.ibb.co/W0sKLTf/career-9.jpg",
+      "experience": "3-4 years",
+      "job_details": "Manage and operate event technology, including audio, video, and lighting equipment."
+    },
+    {
+      "id": 11,
+      "job_title": "Gaming Event Photographer",
+      "job_location": "San Diego, CA",
+      "job_image": "https://i.ibb.co/Kj82k4L/career-10.jpg",
+      "experience": "2-3 years",
+      "job_details": "Capture memorable moments at gaming events through photography."
+    },
+    {
+      "id": 12,
+      "job_title": "Technical Event Planner",
+      "job_location": "Atlanta, GA",
+      "job_image": "https://i.ibb.co/TvnHHXm/career-11.jpg",
+      "experience": "4-5 years",
+      "job_details": "Plan and execute technical aspects of gaming and tech events, ensuring a seamless experience."
+    }
+  ]
+  

@@ -12,7 +12,8 @@ const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
 
-  const { createUser, setUser,setLoading } = useContext(AuthContext);
+  const { createUser, setUser, setLoading, setNavName  } =
+    useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -41,13 +42,12 @@ const Register = () => {
       return;
     }
 
-    console.log(name, email, password);
 
     // creating user
     createUser(email, password)
       .then((result) => {
+        setNavName(name);
         e.target.reset();
-        setUser(result.user);
 
         // updating user info
         updateProfile(result.user, {
@@ -56,16 +56,17 @@ const Register = () => {
         })
           .then(() => {
             toast.success("Account Created Successfully");
+            setUser(result.user);
             navigate("/");
           })
           .catch((error) => {
             toast.error(error.message);
-            setLoading(false)
+            setLoading(false);
           });
       })
       .catch((error) => {
         toast.error(error.message);
-        setLoading(false)
+        setLoading(false);
       });
   };
 

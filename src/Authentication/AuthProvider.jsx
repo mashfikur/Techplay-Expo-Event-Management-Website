@@ -13,6 +13,8 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [navName, setNavName] = useState(null);
+  const [navImage, setNavImage] = useState(null);
 
   const createUser = (email, password) => {
     setLoading(true);
@@ -49,6 +51,10 @@ const AuthProvider = ({ children }) => {
     userSignOut,
     setUser,
     setLoading,
+    navName,
+    setNavName,
+    navImage,
+    setNavImage,
   };
 
   return (

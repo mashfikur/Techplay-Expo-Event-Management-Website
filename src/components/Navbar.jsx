@@ -5,7 +5,9 @@ import { useContext } from "react";
 import { AuthContext } from "../Authentication/AuthProvider";
 import toast from "react-hot-toast";
 const Navbar = () => {
-  const { user, loading, userSignOut, setUser } = useContext(AuthContext);
+  const { user, loading, userSignOut, setUser, navName  } =
+    useContext(AuthContext);
+
 
   const navLinks = (
     <>
@@ -81,12 +83,12 @@ const Navbar = () => {
             <>
               <div className=" gap-3 items-center hidden md:flex">
                 <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
-                  {user.displayName}
+                  {user?.displayName ? user?.displayName : navName}
                 </p>
 
                 <img
                   className="w-12 rounded-full h-12  "
-                  src={user.photoURL ? user.photoURL : userLogo}
+                  src={user?.photoURL ? user?.photoURL : userLogo}
                   alt=""
                 />
                 <div>
