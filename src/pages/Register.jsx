@@ -6,8 +6,8 @@ import { AuthContext } from "../Authentication/AuthProvider";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import toast from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import AOS from "aos";
+import "aos/dist/aos.css";
 AOS.init();
 
 const Register = () => {
@@ -15,8 +15,14 @@ const Register = () => {
   const [showPass, setShowPass] = useState(false);
   const navigate = useNavigate();
 
-  const { createUser, setUser, setLoading, setNavName, googleUser } =
-    useContext(AuthContext);
+  const {
+    createUser,
+    setUser,
+    setLoading,
+    setNavName,
+    googleUser,
+    githubUser,
+  } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -84,13 +90,28 @@ const Register = () => {
       });
   };
 
+  const handleGithubLogin = () => {
+    githubUser()
+      .then(() => {
+        toast.success("Logged in Successfully");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        setLoading(false);
+      });
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="container mx-auto">
-      <div data-aos="fade-up" className="min-w-screen min-h-[90vh] flex items-center justify-center px-5 pb-12">
+      <div
+        data-aos="fade-up"
+        className="min-w-screen min-h-[90vh] flex items-center justify-center px-5 pb-12"
+      >
         <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
           <div className="md:flex w-full">
             <div className="hidden  md:flex md:flex-col md:items-center md:justify-center w-1/2 bg-gradient-to-r from-[#ff00d4] to-[#00ddff] py-10 px-10">
@@ -211,7 +232,10 @@ const Register = () => {
                     <FcGoogle className="text-xl"></FcGoogle> Sign Up with
                     Google
                   </button>
-                  <button className="btn w-full xl:w-1/3 rounded-full btn-outline ">
+                  <button
+                    onClick={handleGithubLogin}
+                    className="btn w-full xl:w-1/3 rounded-full btn-outline "
+                  >
                     <BsGithub className="text-xl"></BsGithub>
                     Sign Up with Github
                   </button>

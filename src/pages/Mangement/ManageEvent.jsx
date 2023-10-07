@@ -1,20 +1,30 @@
 import { BsFillSendFill } from "react-icons/bs";
-import AOS from 'aos';
-import 'aos/dist/aos.css'; 
+import AOS from "aos";
+import "aos/dist/aos.css";
+import toast from "react-hot-toast";
 AOS.init();
 
 const ManageEvent = () => {
+  const handleEvent = (e) => {
+    e.preventDefault();
+    e.target.reset();
+    toast.success("Thanks for Contacting , We will be in touch");
+  };
+
   return (
     <div>
       <div>
         <section className="bg-gray-100">
           <div className="mx-auto container  py-16  lg:px-0">
             <div className="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
-              <div data-aos="fade-down" className="lg:col-span-2 p-4 text-center lg:text-start lg:py-12">
+              <div
+                data-aos="fade-down"
+                className="lg:col-span-2 p-4 text-center lg:text-start lg:py-12"
+              >
                 <h3 className=" text-xl lg:text-2xl text-black font-bold">
                   Elevate Your Event Experience by{" "}
                 </h3>
-                <h3 className="font-bold bg-clip-text py-3 bg-gradient-to-r from-[#ef4136] to-[#fbb040] text-transparent text-5xl bg xl:text-6xl">
+                <h3 className="font-bold bg-clip-text py-3 bg-gradient-to-r from-[#ef4136] to-[#fbb040] text-transparent text-4xl bg xl:text-6xl">
                   Customizing <br /> and <br />
                   Collaborating
                 </h3>
@@ -31,8 +41,11 @@ const ManageEvent = () => {
                 </p>
               </div>
 
-              <div data-aos="fade-up" className="rounded-lg bg-white p-4 shadow-lg lg:col-span-3 lg:p-12">
-                <form action="" className="space-y-4">
+              <div
+                data-aos="fade-up"
+                className="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12"
+              >
+                <form onSubmit={handleEvent} className="space-y-4">
                   <div>
                     <label className="sr-only" htmlFor="name">
                       Name

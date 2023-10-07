@@ -8,8 +8,16 @@ const Footer = () => {
         <footer className=" py-16 lg:footer flex flex-col gap-6 text-center items-center justify-center w-full text-neutral-content">
           <div className="w-full mx-auto">
             <div className="flex gap-2 justify-center items-center lg:justify-normal">
-              <img className="w-[10%] md:w-[5%] lg:w-[10%]" src={navIcon} alt="" />
-              <h3 className="text-3xl text-center font-bold">TechPlay Expo</h3>
+              <img
+                className="w-[10%] md:w-[5%] lg:w-[10%]"
+                src={navIcon}
+                alt=""
+              />
+              <Link to="/">
+                <h3 className="text-3xl text-center font-bold">
+                  TechPlay Expo
+                </h3>
+              </Link>
             </div>
           </div>
           <nav>

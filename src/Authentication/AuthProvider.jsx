@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import { createContext, useEffect, useState } from "react";
 import auth from "../firebase/firebase.config";
 import {
+  GithubAuthProvider,
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -32,6 +33,13 @@ const AuthProvider = ({ children }) => {
 
   const googleUser = () => {
     return signInWithPopup(auth, googleProvider);
+  };
+
+  //github sign in
+  const gihubProvider = new GithubAuthProvider();
+
+  const githubUser = () => {
+    return signInWithPopup(auth, gihubProvider);
   };
 
   const userSignOut = () => {
@@ -65,6 +73,7 @@ const AuthProvider = ({ children }) => {
     navImage,
     setNavImage,
     googleUser,
+    githubUser,
   };
 
   return (

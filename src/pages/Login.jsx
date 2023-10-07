@@ -10,7 +10,8 @@ import "aos/dist/aos.css";
 AOS.init();
 
 const Login = () => {
-  const { userSignIn, setLoading, googleUser } = useContext(AuthContext);
+  const { userSignIn, setLoading, googleUser, githubUser } =
+    useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -36,6 +37,18 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     googleUser()
+      .then(() => {
+        toast.success("Logged in Successfully");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        setLoading(false);
+      });
+  };
+
+  const handleGithubLogin = () => {
+    githubUser()
       .then(() => {
         toast.success("Logged in Successfully");
         navigate("/");
@@ -121,7 +134,7 @@ const Login = () => {
                         <FcGoogle className="md:text-xl"></FcGoogle>
                         Sign in with Google
                       </button>
-                      <button className="btn  rounded-full">
+                      <button onClick={handleGithubLogin} className="btn  rounded-full">
                         <BsGithub className="md:text-xl"></BsGithub>
                         Sign in with Github
                       </button>
