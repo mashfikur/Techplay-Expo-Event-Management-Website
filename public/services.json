@@ -18,13 +18,19 @@
       "service_name": "Gamer's Paradise",
       "category_name": "Gaming Event",
       "service_details": "Get ready for an adrenaline-pumping gaming extravaganza! Compete in epic eSports tournaments, showcase your cosplay skills, and be the first to try out upcoming game releases. Don't miss out on the chance to win fantastic prizes and immerse yourself in the gaming community.",
-      "service_image": "https://i.ibb.co/PGxG88x/images-q-tbn-ANd9-Gc-QL9kl-Rb-RTJG2i-KYy-QK6-Yix-Nn-POYjd-WX0q-DMx-SD9-Likdpu-Wnb-Kwyzgp0-Sz-B3r-R0.jpg",
+      "service_image": "https://i.ibb.co/tJ6m849/generic-pexels-gaming-event-alena-darmel-7862655-1024x620.jpgs",
       "price": 1800,
       "service_features": [
         "Tournaments",
         "Cosplay Contest",
         "Game Previews",
         "Prize Giveaways"
+      ],
+      "more_images":[
+        "https://i.ibb.co/7VshCTW/D4-BC4-W-1024x683.jpg",
+        "https://i.ibb.co/Bqr5G0z/images-q-tbn-ANd9-Gc-SAN3-uck-Pyst-UYb-MODMn-Wl-RDBe-JMtm-RZp-Cvf3d-K3ely-Sxp0xci2-Sg-RWP7nm-YZGCvql.jpg",
+        "https://i.ibb.co/f1DZSyn/tech-conference-networking-tips.jpg",
+        "https://cdn2.hubspot.net/hubfs/3873528/WiTAF%20-%20Women%20in%20Technology%20Africa/images/backgrounds/Women%20in%20Tech%20Africa%202019.jpg"
       ]
     },
     {
