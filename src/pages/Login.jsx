@@ -1,12 +1,32 @@
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "../Authentication/AuthProvider";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const { userSignIn ,setLoading } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-    const handleSubmit = (e) => {
-        e.preventDefault()
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+
+    // singning in user
+    userSignIn(email, password)
+      .then(() => {
+        toast.success("Logged In Successfully");
+        e.target.reset()
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error(error.code);
+        setLoading(false)
+      });
+  };
 
   return (
     <div className="container mx-auto">
@@ -26,7 +46,7 @@ const Login = () => {
                 </div>
                 <div className="divide-y divide-gray-200">
                   <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                    <form onSubmit={handleSubmit} >
+                    <form onSubmit={handleSubmit}>
                       <div className="relative mb-5">
                         <input
                           autoComplete="off"
@@ -78,7 +98,13 @@ const Login = () => {
                         Sign in with Github
                       </button>
                       <p className="text-base text-center font-semibold mt-4">
-                        New to this website ? Please <Link className="font-bold text-blue-600 underline" to="/register" >Register</Link>{" "}
+                        New to this website ? Please{" "}
+                        <Link
+                          className="font-bold text-blue-600 underline"
+                          to="/register"
+                        >
+                          Register
+                        </Link>{" "}
                       </p>
                     </div>
                   </div>

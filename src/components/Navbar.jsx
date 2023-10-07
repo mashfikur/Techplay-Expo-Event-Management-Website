@@ -62,7 +62,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-3">
             <img className=" w-[15%] md:w-[7%]" src={navIcon} alt="" />
-            <Link to="/" >
+            <Link to="/">
               <h3 className="font-semibold text-base md:text-3xl">
                 TechPlay Expo
               </h3>

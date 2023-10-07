@@ -10,9 +10,9 @@ import { updateProfile } from "firebase/auth";
 const Register = () => {
   const [showError, setShowError] = useState("");
   const [showPass, setShowPass] = useState(false);
-  const navigate =useNavigate()
+  const navigate = useNavigate();
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, setUser,setLoading } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,6 +47,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         e.target.reset();
+        setUser(result.user);
 
         // updating user info
         updateProfile(result.user, {
@@ -55,14 +56,16 @@ const Register = () => {
         })
           .then(() => {
             toast.success("Account Created Successfully");
-            navigate("/")
+            navigate("/");
           })
           .catch((error) => {
             toast.error(error.message);
+            setLoading(false)
           });
       })
       .catch((error) => {
         toast.error(error.message);
+        setLoading(false)
       });
   };
 

@@ -2,15 +2,29 @@ import PropTypes from "prop-types";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
 const Service = ({ service }) => {
-  const { id, service_name, service_image, service_details, price } = service;
+  const {
+    id,
+    service_name,
+    service_image,
+    service_details,
+    price,
+    category_name,
+  } = service;
   return (
     <div>
       <div className="card hover:drop-shadow-2xl duration-300 h-[32rem] bg-base-100 shadow-xl">
         <figure>
-          <img src={service_image} alt="service_image" className="w-full h-[15rem] " />
+          <img
+            src={service_image}
+            alt="service_image"
+            className="w-full h-[15rem] "
+          />
         </figure>
         <div className="card-body flex-1 ">
-          <h2 className="card-title">{service_name}</h2>
+          <div className="flex flex-col lg:flex-row items-center justify-between">
+            <h2 className="card-title">{service_name}</h2>{" "}
+            <div className="badge badge-secondary">{category_name}</div>
+          </div>
           <p className="font-medium text-gray-400">
             {service_details.split("").slice(0, 150)} ...
           </p>
