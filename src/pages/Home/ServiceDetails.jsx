@@ -2,6 +2,10 @@ import { useEffect } from "react";
 import { BsArrowLeft, BsHeartFill } from "react-icons/bs";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
+
 // swiper slider
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,7 +17,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 // import required modules
-import {  Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 
 const ServiceDetails = () => {
   const { ID } = useParams();
@@ -37,7 +41,10 @@ const ServiceDetails = () => {
   return (
     <div className="container mx-auto">
       <div>
-        <div className="flex flex-col lg:flex-row px-2 xl:px-0 gap-5 justify-between items-center">
+        <div
+          data-aos="fade-right"
+          className="flex flex-col lg:flex-row px-2 xl:px-0 gap-5 justify-between items-center"
+        >
           <div>
             <Link to="/">
               <button className="btn btn-neutral">
@@ -95,6 +102,7 @@ const ServiceDetails = () => {
             <ul className="font-semibold mt-5 grid gap-5 grid-cols-2 lg:grid-cols-1 ">
               {service_features.map((feature, idx) => (
                 <li
+                  data-aos="zoom-in"
                   className=" px-4 py-3 rounded-lg text-white font-semibold bg-neutral"
                   key={idx}
                 >

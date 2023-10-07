@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import JobCard from "./JobCard";
 import { BsSearch } from "react-icons/bs";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Jobs = () => {
+  AOS.init()
   const [allJobs, setAllJobs] = useState([]);
   const [displayJobs, setDisplayJobs] = useState([]);
   const [searchText, setSearchText] = useState(null);
@@ -18,38 +21,37 @@ const Jobs = () => {
 
   const handleSearch = (e) => {
     const text = e.target.value;
-    console.log(text);
     setSearchText(text);
-    console.log(allJobs);
 
     const finded = allJobs.filter((job) =>
       job.job_title.toLowerCase().includes(searchText)
     );
     console.log(finded);
 
-    if (!searchText) {
+    if (!searchText.length) {
       setDisplayJobs(allJobs);
       return;
     }
 
     if (finded) {
       setDisplayJobs(finded);
-    } else {
-      setDisplayJobs(allJobs);
     }
   };
 
   return (
     <div>
       <div className=" min-h-screen container mx-auto">
-        <h3 className="text-5xl text-transparent drop-shadow-2xl text-center bg-clip-text bg-gradient-to-r from-[#ff00d4] to-[#00ddff]  font-bold">
-          Find Your Next Oppurtunity
-        </h3>
+        <div  >
+          <h3 data-aos="fade-right" className="text-5xl mt-6 text-transparent drop-shadow-2xl text-center bg-clip-text bg-gradient-to-r from-[#ff00d4] to-[#00ddff]  font-bold">
+            Find Your Next Oppurtunity
+          </h3>
+        </div>
 
-        <div className="flex flex-col items-center my-6 ">
+        <div data-aos="fade-left" className="flex flex-col items-center my-6 ">
           <div className="flex items-center ">
             <BsSearch className="absolute ml-3 "></BsSearch>
             <input
+
               type="text"
               name="text"
               onChange={handleSearch}

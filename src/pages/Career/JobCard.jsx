@@ -1,10 +1,14 @@
 import PropTypes from "prop-types";
 import { BsCheck } from "react-icons/bs";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 const JobCard = ({ job }) => {
   return (
     <div>
-      <div className="card h-[35rem] bg-base-100 shadow-xl">
+      <div data-aos="fade-up" className="card h-[35rem] bg-base-100 shadow-xl">
         <figure>
           <img className="w-full h-60" src={job.job_image} alt="job-image" />
         </figure>

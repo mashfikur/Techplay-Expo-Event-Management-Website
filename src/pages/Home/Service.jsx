@@ -1,6 +1,10 @@
 import PropTypes from "prop-types";
 import { BsArrowUpRight } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import AOS from 'aos';
+import 'aos/dist/aos.css'; 
+AOS.init();
+
 const Service = ({ service }) => {
   const {
     id,
@@ -12,7 +16,7 @@ const Service = ({ service }) => {
   } = service;
   return (
     <div>
-      <div className="card hover:drop-shadow-2xl duration-300 h-[32rem] bg-base-100 shadow-xl">
+      <div data-aos="fade-up" className="card hover:drop-shadow-2xl duration-300 h-[32rem] bg-base-100 shadow-xl">
         <figure>
           <img
             src={service_image}

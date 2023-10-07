@@ -1,11 +1,16 @@
 import { BsSearch } from "react-icons/bs";
 import Jobs from "./Jobs";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
+
+
 const Career = () => {
   return (
     <div>
       <div className="flex p-6 xl:p-0 flex-col-reverse lg:flex-row container mx-auto items-center min-h-[90vh] ">
-        <div className="flex-1 space-y-6 ">
+        <div data-aos="fade-right" className="flex-1 space-y-6 ">
           <h3 className=" text-3xl lg:text-5xl font-bold mb-5">
             Want to build in your carrer in event management?
           </h3>
@@ -23,7 +28,7 @@ const Career = () => {
           </div>
         </div>
 
-        <div className="flex-1">
+        <div data-aos="fade-left" className="flex-1">
           <img src="https://i.ibb.co/BVyjDLh/interview.png" alt="" />
         </div>
       </div>
@@ -31,12 +36,12 @@ const Career = () => {
       <Jobs></Jobs>
 
       <div className="my-12  container mx-auto p-6">
-        <h3 className="text-4xl font-bold text-center">
+        <h3 data-aos="zoom-in" className="text-4xl font-bold text-center">
           Frequently Asked Questions
         </h3>
 
         <div className="flex gap-6 flex-col-reverse lg:flex-row items-center">
-          <div className="flex flex-1 flex-col gap-3">
+          <div data-aos="fade-right" className="flex flex-1 flex-col gap-3">
             <div className="collapse collapse-arrow bg-base-200">
               <input type="radio" name="my-accordion-2" checked="checked" />
               <div className="collapse-title text-xl font-medium">
@@ -87,7 +92,7 @@ const Career = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1">
+          <div data-aos="fade-left" className="flex-1">
             <img src="https://i.ibb.co/sbSxx9t/faq.png" alt="" />
           </div>
         </div>
