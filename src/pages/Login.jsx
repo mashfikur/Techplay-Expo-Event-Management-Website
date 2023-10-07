@@ -1,13 +1,16 @@
 import { FcGoogle } from "react-icons/fc";
 import { BsGithub } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
-import { useContext } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../Authentication/AuthProvider";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { userSignIn ,setLoading,googleUser } = useContext(AuthContext);
+  const { userSignIn, setLoading, googleUser } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location?.state?.from?.pathname || "/";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,26 +21,30 @@ const Login = () => {
     userSignIn(email, password)
       .then(() => {
         toast.success("Logged In Successfully");
-        e.target.reset()
-        navigate("/");
+        e.target.reset();
+        navigate(from , {replace:true} );
       })
       .catch((error) => {
         toast.error(error.code);
-        setLoading(false)
+        setLoading(false);
       });
   };
 
   const handleGoogleLogin = () => {
     googleUser()
-    .then(() => {
-      toast.success("Logged in Successfully")
-      navigate("/")
-    })
-    .catch((error) => {
-      toast.error(error.message)
-      setLoading(false)
-    })
-  }
+      .then(() => {
+        toast.success("Logged in Successfully");
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        setLoading(false);
+      });
+  };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto">
@@ -100,7 +107,10 @@ const Login = () => {
                     </form>
                     <div className="divider">OR</div>
                     <div className="flex flex-col gap-3  ">
-                      <button onClick={handleGoogleLogin} className="btn  rounded-full">
+                      <button
+                        onClick={handleGoogleLogin}
+                        className="btn  rounded-full"
+                      >
                         <FcGoogle className="md:text-xl"></FcGoogle>
                         Sign in with Google
                       </button>

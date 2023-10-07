@@ -59,17 +59,23 @@ const Jobs = () => {
           </div>
         </div>
 
-        <div className="grid p-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-12  ">
-          {displayJobs.length>0 ? (
-            displayJobs.map((job) => <JobCard key={job.id} job={job}></JobCard>)
-          ) : (
-            <>
+        {displayJobs.length ? (
+          <>
+            <div className="grid p-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 my-12  ">
+              {displayJobs.map((job) => (
+                <JobCard key={job.id} job={job}></JobCard>
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="flex flex-col items-center justify-center">
               <h3 className="text-6xl flex text-center  text-gray-500 font-bold">
                 Nothing found based on your search
               </h3>
-            </>
-          )}
-        </div>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );

@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Career from "../pages/Career/Career";
 import ManageEvent from "../pages/Mangement/ManageEvent";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/service/:ID",
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader: () => fetch("/services.json"),
       },
       {
@@ -34,11 +35,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/career",
-        element: <Career></Career>,
+        element: <PrivateRoute><Career></Career></PrivateRoute>,
       },
       {
         path: "/manage-events",
-        element: <ManageEvent></ManageEvent>,
+        element: <PrivateRoute><ManageEvent></ManageEvent></PrivateRoute>,
       },
     ],
   },

@@ -45,7 +45,7 @@ const JobCard = ({ job }) => {
 };
 
 JobCard.propTypes = {
-  job: PropTypes.node,
+  job: PropTypes.object,
 };
 
 export default JobCard;
