@@ -2,6 +2,19 @@ import { useEffect } from "react";
 import { BsArrowLeft, BsHeartFill } from "react-icons/bs";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 
+// swiper slider
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+// import required modules
+import {  Navigation, Pagination } from "swiper/modules";
+
 const ServiceDetails = () => {
   const { ID } = useParams();
 
@@ -13,13 +26,13 @@ const ServiceDetails = () => {
     service_name,
     service_details,
     price,
-    service_image,
     service_features,
+    more_images,
   } = selected;
 
   useEffect(() => {
-    window.scrollTo(0,0)
-  },[])
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="container mx-auto">
@@ -44,14 +57,32 @@ const ServiceDetails = () => {
             </p>
           </div>
         </div>
-        <div className="my-12">
-          <img
-            className="w-[40%] mx-auto rounded-lg shadow-2xl "
+        <div className="my-12 w-full">
+          {/* <img
+            className="w-[70%] mx-auto rounded-lg shadow-2xl "
             src={service_image}
             alt=""
-          />
+          /> */}
+
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={30}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+            className="mySwiper"
+          >
+            {more_images.map((slide, idx) => (
+              <SwiperSlide key={idx}>
+                <img className="w-[70%] mx-auto" src={slide} alt="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
-        <div className="flex flex-col items-center gap-8 lg:flex-row p-4">
+        <div className="flex flex-col  items-center gap-8 lg:flex-col p-4">
           <div className="flex-1">
             <p className="font-medium mb-4 text-gray-400 text-center text-xl lg:text-start">
               {" "}
@@ -61,7 +92,7 @@ const ServiceDetails = () => {
 
           <div className="flex-1 text-center">
             <h3 className="text-3xl font-bold"> Features We Provide </h3>
-            <ul className="font-semibold mt-5 grid gap-5 grid-cols-2">
+            <ul className="font-semibold mt-5 grid gap-5 grid-cols-2 lg:grid-cols-1 ">
               {service_features.map((feature, idx) => (
                 <li
                   className=" px-4 py-3 rounded-lg text-white font-semibold bg-neutral"
