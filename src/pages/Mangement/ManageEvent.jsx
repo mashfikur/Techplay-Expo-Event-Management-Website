@@ -55,6 +55,7 @@ const ManageEvent = () => {
                       placeholder="Customized Event name"
                       type="text"
                       id="name"
+                      required
                     />
                   </div>
 
@@ -68,6 +69,7 @@ const ManageEvent = () => {
                         placeholder="Event address"
                         type="text"
                         id="text"
+                        required
                       />
                     </div>
 
@@ -80,6 +82,7 @@ const ManageEvent = () => {
                         placeholder="Phone Number"
                         type="tel"
                         id="phone"
+                        required
                       />
                     </div>
                   </div>
@@ -101,6 +104,7 @@ const ManageEvent = () => {
                         className="w-full rounded-lg border border-black p-3 text-sm"
                         placeholder="Enter your date"
                         type="date"
+                        required
                       />
                     </div>
                   </div>
