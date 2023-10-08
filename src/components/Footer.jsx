@@ -10,10 +10,12 @@ const Footer = () => {
       <div className="container mx-auto">
         <footer className="footer p-10 text-white">
           <aside data-aos="fade-right" className="">
-            <p className="font-bold flex gap-2 text-xl md:text-3xl">
-              <img className="w-[2rem]" src={navIcon} alt="navicon" />
-              TechPlay Expo
-            </p>
+            <Link to="/">
+              <p className="font-bold flex gap-2 text-xl md:text-3xl">
+                <img className="w-[2rem]" src={navIcon} alt="navicon" />
+                TechPlay Expo
+              </p>
+            </Link>
             <p className="text-gray-400">
               Trusted Provider for a Mesmorizing Event
             </p>

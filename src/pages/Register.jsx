@@ -34,6 +34,12 @@ const Register = () => {
     // reseting the error
     setShowError("");
 
+    // email validation
+    if (!/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      setShowError("Enter a valid email");
+      return;
+    }
+
     // password validation
     if (password.length < 6) {
       setShowError("Your Password should be more than 6 charectars");
@@ -46,7 +52,7 @@ const Register = () => {
       return;
     }
     //
-    if (!/[#&$@%^]/g.test(password)) {
+    if (!/[#!*&$@%^]/g.test(password)) {
       setShowError("Your password should contain a special charectar");
       return;
     }

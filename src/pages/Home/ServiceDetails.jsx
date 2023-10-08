@@ -47,7 +47,7 @@ const ServiceDetails = () => {
         >
           <div>
             <Link to="/">
-              <button className="btn btn-neutral">
+              <button className="btn bg-black text-white hover:bg-black">
                 {" "}
                 <BsArrowLeft></BsArrowLeft> Go back
               </button>
@@ -103,7 +103,7 @@ const ServiceDetails = () => {
               {service_features.map((feature, idx) => (
                 <li
                   data-aos="zoom-in"
-                  className=" px-4 py-3 rounded-lg text-white font-semibold bg-neutral"
+                  className=" px-4 py-3 rounded-lgfont-semibold btn bg-black text-white hover:bg-black"
                   key={idx}
                 >
                   {" "}

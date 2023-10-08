@@ -66,9 +66,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <img className=" w-[15%] md:w-[7%]" src={navIcon} alt="" />
             <Link to="/">
-              <h3 className="font-bold text-base md:text-3xl">
-                TechPlay Expo
-              </h3>
+              <h3 className="font-bold text-base md:text-3xl">TechPlay Expo</h3>
             </Link>
           </div>
         </div>
@@ -83,11 +81,9 @@ const Navbar = () => {
           ) : user ? (
             <>
               <div className=" gap-3 items-center hidden md:flex">
-                {user?.displayName && (
-                  <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
-                    {user?.displayName ? user?.displayName : navName}
-                  </p>
-                )}
+                <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
+                  {user?.displayName ? user?.displayName : navName}
+                </p>
 
                 <img
                   className="w-12 border-2 border-black rounded-full h-12  "
@@ -97,7 +93,7 @@ const Navbar = () => {
                 <div>
                   <button
                     onClick={handleSignOut}
-                    className="btn   round btn-neutral "
+                    className="btn bg-black hover:bg-black round btn-neutral "
                   >
                     Logout
                   </button>
@@ -106,7 +102,7 @@ const Navbar = () => {
 
               <div className=" md:hidden dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
+                  <div className="w-10 border-2 border-black rounded-full">
                     <img src={user?.photoURL ? user?.photoURL : userLogo} />
                   </div>
                 </label>
@@ -123,7 +119,7 @@ const Navbar = () => {
                     <Link className="  md:block">
                       <button
                         onClick={handleSignOut}
-                        className="btn btn-sm w-full btn-neutral"
+                        className="btn bg-black text-white hover:bg-black btn-sm w-full "
                       >
                         Logout
                       </button>
