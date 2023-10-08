@@ -24,3 +24,7 @@ body{
     flex-direction: column;
 }
 
+.active{
+    background: black;
+    color: white;
+}

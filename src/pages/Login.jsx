@@ -120,7 +120,7 @@ const Login = () => {
                         </label>
                       </div>
                       <div className="relative">
-                        <button className="btn btn-neutral w-full">
+                        <button className="btn bg-black text-white hover:bg-black w-full">
                           Login
                         </button>
                       </div>

@@ -10,15 +10,17 @@ const Navbar = () => {
 
   const navLinks = (
     <>
-      <li>
-        <NavLink to="/">Home</NavLink>
-      </li>
-      <li>
-        <NavLink to="/career">Career</NavLink>
-      </li>
-      <li>
-        <NavLink to="/manage-events">Manage Events</NavLink>
-      </li>
+      <NavLink className="px-4 py-2 rounded-full" to="/">
+        Home
+      </NavLink>
+
+      <NavLink className="px-4 py-2 rounded-full" to="/career">
+        Career
+      </NavLink>
+
+      <NavLink className="px-4 py-2 rounded-full" to="/manage-events">
+        Manage Events
+      </NavLink>
     </>
   );
 
@@ -64,7 +66,7 @@ const Navbar = () => {
           <div className="flex items-center gap-3">
             <img className=" w-[15%] md:w-[7%]" src={navIcon} alt="" />
             <Link to="/">
-              <h3 className="font-semibold text-base md:text-3xl">
+              <h3 className="font-bold text-base md:text-3xl">
                 TechPlay Expo
               </h3>
             </Link>
@@ -134,22 +136,24 @@ const Navbar = () => {
             <>
               <div className="hidden md:flex gap-4">
                 <Link to="/register">
-                  <button className="btn  round btn-neutral btn-outline ">
+                  <button className="btn capitalize px-5 round btn-outline hover:bg-black hover:text-white rounded-full ">
                     Register
                   </button>
                 </Link>
                 <Link to="/login">
-                  <button className="btn  round btn-neutral ">Login</button>
+                  <button className="btn capitalize px-5 round bg-black hover:bg-black text-white rounded-full ">
+                    Login
+                  </button>
                 </Link>
               </div>
               <div className=" md:hidden flex gap-2">
                 <Link to="/register">
-                  <button className="btn btn-xs btn-neutral  rounded-lg ">
+                  <button className="btn btn-xs bg-black  text-white rounded-full   ">
                     Register
                   </button>
                 </Link>
                 <Link to="/login">
-                  <button className="btn btn-xs btn-neutral  rounded-lg ">
+                  <button className="btn btn-xs bg-black text-white rounded-full   ">
                     Login
                   </button>
                 </Link>

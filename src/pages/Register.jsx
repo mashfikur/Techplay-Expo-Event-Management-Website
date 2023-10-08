@@ -216,7 +216,7 @@ const Register = () => {
                   </p>
                 )}
                 <div className="flex flex-col items-center">
-                  <button className="btn btn-neutral w-full xl:w-1/3">
+                  <button className="btn  bg-black text-white hover:bg-black w-full xl:w-1/3">
                     REGISTER NOW
                   </button>
                 </div>
