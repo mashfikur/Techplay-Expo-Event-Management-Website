@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Authentication/AuthProvider";
 import toast from "react-hot-toast";
 const Navbar = () => {
-  const { user, loading, userSignOut, setUser, navName } =
+  const { user, loading, userSignOut, setUser, navName, navImage } =
     useContext(AuthContext);
 
   const navLinks = (
@@ -82,13 +82,23 @@ const Navbar = () => {
             <>
               <div className=" gap-3 items-center hidden md:flex">
                 <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
-                  {user?.displayName ? user?.displayName : navName}
+                  {user.displayName
+                    ? user?.displayName
+                    : navName
+                    ? navName
+                    : "user"}
                 </p>
 
                 <img
                   className="w-12 border-2 border-black rounded-full h-12  "
-                  src={user?.photoURL ? user?.photoURL : userLogo}
-                  alt=""
+                  src={
+                    user.photoURL
+                      ? user.photoURL
+                      : navImage
+                      ? navImage
+                      : userLogo
+                  }
+                  alt="user"
                 />
                 <div>
                   <button
@@ -103,7 +113,16 @@ const Navbar = () => {
               <div className=" md:hidden dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 border-2 border-black rounded-full">
-                    <img src={user?.photoURL ? user?.photoURL : userLogo} />
+                    <img
+                      src={
+                        user.photoURL
+                          ? user.photoURL
+                          : navImage
+                          ? navImage
+                          : userLogo
+                      }
+                      alt="user"
+                    />
                   </div>
                 </label>
                 <ul
@@ -112,7 +131,11 @@ const Navbar = () => {
                 >
                   <li>
                     <span className="text-xl text-center font-semibold">
-                      {user?.displayName}
+                      {user.displayName
+                        ? user?.displayName
+                        : navName
+                        ? navName
+                        : "user"}
                     </span>
                   </li>
                   <li>

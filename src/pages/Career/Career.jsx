@@ -1,10 +1,9 @@
 import { BsSearch } from "react-icons/bs";
 import Jobs from "./Jobs";
 
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 AOS.init();
-
 
 const Career = () => {
   return (
@@ -21,10 +20,12 @@ const Career = () => {
             career.
           </p>
           <div>
-            <button className="btn btn-neutral ">
-              {" "}
-              <BsSearch></BsSearch> Find job
-            </button>
+            <a href="#jobs">
+              <button className="btn btn-neutral ">
+                {" "}
+                <BsSearch></BsSearch> Find job
+              </button>
+            </a>
           </div>
         </div>
 
@@ -35,7 +36,7 @@ const Career = () => {
 
       <Jobs></Jobs>
 
-      <div className="my-12  container mx-auto p-6">
+      <div id="#jobs" className="my-12  container mx-auto p-6">
         <h3 data-aos="zoom-in" className="text-4xl font-bold text-center">
           Frequently Asked Questions
         </h3>

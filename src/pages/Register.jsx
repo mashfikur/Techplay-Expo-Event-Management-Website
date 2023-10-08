@@ -22,6 +22,7 @@ const Register = () => {
     setNavName,
     googleUser,
     githubUser,
+    setNavImage,
   } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
@@ -61,6 +62,7 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         setNavName(name);
+        setNavImage(imgLink);
         e.target.reset();
 
         // updating user info
@@ -74,12 +76,12 @@ const Register = () => {
             navigate("/");
           })
           .catch((error) => {
-            toast.error(error.message);
+            toast.error(error.code);
             setLoading(false);
           });
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.code);
         setLoading(false);
       });
   };
@@ -91,7 +93,7 @@ const Register = () => {
         navigate("/");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.code);
         setLoading(false);
       });
   };
@@ -103,7 +105,7 @@ const Register = () => {
         navigate("/");
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.code);
         setLoading(false);
       });
   };

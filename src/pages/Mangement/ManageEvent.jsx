@@ -117,13 +117,10 @@ const ManageEvent = () => {
 
                       <label
                         htmlFor="option1"
-                        className="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
+                        className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
                         tabIndex="0"
                       >
-                        <span className="text-sm cursor-pointer">
-                          {" "}
-                          Basic Event{" "}
-                        </span>
+                        <span className="text-sm"> Starter Package </span>
                       </label>
                     </div>
 
@@ -138,13 +135,10 @@ const ManageEvent = () => {
 
                       <label
                         htmlFor="option2"
-                        className="block w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
+                        className="block w-full cursor-pointer rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
                         tabIndex="0"
                       >
-                        <span className="text-sm cursor-pointer">
-                          {" "}
-                          Premium Package{" "}
-                        </span>
+                        <span className="text-sm "> Premium Package </span>
                       </label>
                     </div>
 
@@ -155,17 +149,15 @@ const ManageEvent = () => {
                         type="radio"
                         tabIndex="-1"
                         name="option"
+                        
                       />
 
                       <label
                         htmlFor="option3"
-                        className="block  w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
+                        className="block cursor-pointer  w-full rounded-lg border border-gray-200 p-3 text-gray-600 hover:border-black peer-checked:border-black peer-checked:bg-black peer-checked:text-white"
                         tabIndex="0"
                       >
-                        <span className="text-sm cursor-pointer">
-                          {" "}
-                          Mega Event{" "}
-                        </span>
+                        <span className="text-sm "> Mega Event </span>
                       </label>
                     </div>
                   </div>

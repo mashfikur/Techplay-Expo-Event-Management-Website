@@ -39,10 +39,10 @@ const Login = () => {
     googleUser()
       .then(() => {
         toast.success("Logged in Successfully");
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.code);
         setLoading(false);
       });
   };
@@ -51,10 +51,10 @@ const Login = () => {
     githubUser()
       .then(() => {
         toast.success("Logged in Successfully");
-        navigate("/");
+        navigate(from, { replace: true });
       })
       .catch((error) => {
-        toast.error(error.message);
+        toast.error(error.code);
         setLoading(false);
       });
   };
@@ -87,7 +87,6 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                       <div className="relative mb-5">
                         <input
-                          autoComplete="off"
                           id="email"
                           name="email"
                           type="email"
