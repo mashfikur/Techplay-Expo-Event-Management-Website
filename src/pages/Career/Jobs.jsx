@@ -40,14 +40,14 @@ const Jobs = () => {
       <div className=" min-h-screen container mx-auto">
         <div>
           <h3
-            data-aos="fade-right"
+            data-aos="fade-up"
             className="text-5xl mt-6 text-transparent drop-shadow-2xl text-center bg-clip-text bg-gradient-to-r from-[#ff00d4] to-[#00ddff]  font-bold"
           >
             Find Your Next Oppurtunity
           </h3>
         </div>
 
-        <div data-aos="fade-left" className="flex flex-col items-center my-6 ">
+        <div data-aos="fade-up" className="flex flex-col items-center my-6 ">
           <div className="flex items-center ">
             <BsSearch className="absolute ml-3 "></BsSearch>
             <input

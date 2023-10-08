@@ -80,8 +80,8 @@ const Navbar = () => {
             <span className="loading loading-spinner loading-lg"></span>
           ) : user ? (
             <>
-              <div className=" gap-3 items-center hidden md:flex">
-                <p className="   px-4 bg-black text-white font-semibold  py-1 rounded-full">
+              <div className=" gap-3 items-center hidden lg:flex">
+                <p className=" text-sm px-4 bg-black text-white font-semibold  py-1 rounded-full">
                   {user.displayName
                     ? user?.displayName
                     : navName
@@ -110,7 +110,7 @@ const Navbar = () => {
                 </div>
               </div>
 
-              <div className=" md:hidden dropdown dropdown-end">
+              <div className=" lg:hidden dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 border-2 border-black rounded-full">
                     <img
@@ -139,7 +139,7 @@ const Navbar = () => {
                     </span>
                   </li>
                   <li>
-                    <Link className="  md:block">
+                    <Link className="md:block">
                       <button
                         onClick={handleSignOut}
                         className="btn bg-black text-white hover:bg-black btn-sm w-full "
